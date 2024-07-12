@@ -1,19 +1,21 @@
 [project]
 name = 'pylandau'
 version = '2.2.1'
+dynamic = ["keywords"]
 description = 'A Landau PDF definition to be used in Python.'
 license = {file = 'LICENSE'}
 requires-python = '>=3.8'
 readme = 'README.md'
 authors = [
-    {name = 'David-Leon Pohl', email = 'pohl@physik.uni-bonn.de'}, 
+    {name = 'David-Leon Pohl', email = 'pohl@physik.uni-bonn.de'},
     {name = 'Christian Bespin', email = 'bespin@physik.uni-bonn.de'}
 ]
-maintainers = [ 
+maintainers = [
     {name = 'Christian Bespin', email = 'bespin@physik.uni-bonn.de'}
 ]
 dependencies = [
-  "cython>=0.29",
+  # "cython>=0.29",
+  "cython==0.29.34",
   "numpy>=1.21",
   "scipy>=1.7",
 ]
@@ -27,6 +29,7 @@ requires = [
     "setuptools",
     "wheel",
     "numpy>=1.21",
-    "cython>=0.29",
+    "cython==0.29.34",
+    # "cython>=0.29",
 ]  # PEP 508 specifications
 build-backend = "setuptools.build_meta"
