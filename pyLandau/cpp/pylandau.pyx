@@ -27,7 +27,7 @@ cdef extern from "pylandau_src.cpp":
 
 cdef data_to_numpy_array_double(cnp.double_t * ptr, cnp.npy_intp N):
     cdef cnp.ndarray[cnp.double_t, ndim = 1] arr = cnp.PyArray_SimpleNewFromData(1, < cnp.npy_intp * > & N, cnp.NPY_DOUBLE, < cnp.double_t * > ptr)
-    PyArray_ENABLEFLAGS(arr, cnp.NPY_OWNDATA)
+    PyArray_ENABLEFLAGS(arr, cnp.NPY_ARRAY_OWNDATA)
     return arr
 
 cdef cnp.double_t * result = NULL
